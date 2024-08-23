@@ -1,0 +1,284 @@
+/* sidebar.module.css */
+
+/* Wrapper for the entire layout */
+.wrapper {
+  display: flex;
+}
+
+/* Section to contain top navbar and sidebar */
+.section {
+  flex-grow: 1;
+}
+
+/* Top navbar styling */
+.top_navbar {
+  background-color: #272727;
+  /* padding: 10px; */
+  display: flex;
+  align-items: center;
+  height: 35px;
+  width: 35px;
+  position: relative;
+  left: 250px;
+  /* border: 5px solid greenyellow; */
+}
+
+.light .top_navbar {
+  background-color: whitesmoke;
+}
+
+/* Hamburger icon styling */
+.hamburger {
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+  z-index: 10;
+  position: relative;
+}
+
+.light .hamburger {
+  color: #000000;
+}
+
+/* Sidebar container styling */
+.sidebar {
+  width: 250px;
+  height: 100%;
+  background-color: #000000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transition: transform 0.3s ease;
+  z-index: 1; /* Ensures sidebar stays on top */
+}
+
+.light .sidebar {
+  background-color: whitesmoke;
+  color: #000000;
+}
+
+.dark .sidebar {
+  background-color: #000000;
+}
+
+/* When the sidebar is visible */
+.show {
+  transform: translateX(0); /* Sidebar is in view */
+}
+
+/* When the sidebar is hidden */
+.hide {
+  transform: translateX(-100%); /* Sidebar is hidden off-screen */
+}
+
+/* Profile image container styling */
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  height: 30px;
+  width: 100px;
+}
+
+.profile img {
+  width: 100px;
+  height: 30px;
+  /* border-radius: 50%; */
+}
+
+/* Sidebar navigation links styling */
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 15px;
+}
+
+.sidebar ul li a {
+  color: #6e6e6e;
+
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+
+.light .sidebar ul li a {
+  color: #6e6e6e;
+}
+
+.sidebar ul li a:hover {
+  background-color: #34495e;
+  border-radius: 4px;
+}
+
+/* Sidebar icons styling */
+.icon {
+  margin-right: 10px;
+}
+
+.active {
+  background: linear-gradient(
+    90deg,
+    rgba(172, 169, 255, 0.91) 0%,
+    rgba(172, 169, 255, 0) 91.25%
+  );
+
+  border-radius: 4px;
+  color: purple;
+}
+
+.themebtn {
+  height: 50px;
+  width: 74px;
+  display: flex;
+  position: relative;
+  /* border: 1px solid blueviolet; */
+  bottom: -50px;
+  left: 30px;
+}
+
+@media (max-width: 768px) {
+  /* Make the sidebar overlay the content on smaller screens */
+  .sidebar {
+    position: absolute;
+    width: 200px;
+  }
+
+  /* sidebar.module.css */
+
+  /* Wrapper for the entire layout */
+  .wrapper {
+    display: flex;
+  }
+
+  /* Section to contain top navbar and sidebar */
+  .section {
+    flex-grow: 1;
+  }
+
+  /* Top navbar styling */
+  .top_navbar {
+    background-color: #272727;
+    /* padding: 10px; */
+    display: flex;
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    position: relative;
+    left: 199px;
+
+    /* border: 5px solid greenyellow; */
+  }
+
+  .light .top_navbar {
+    background-color: whitesmoke;
+  }
+
+  /* Hamburger icon styling */
+  .hamburger {
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+    z-index: 10;
+    position: relative;
+  }
+
+  .light .hamburger {
+    color: #000000;
+  }
+
+  /* Sidebar container styling */
+
+  .light .sidebar {
+    background-color: whitesmoke;
+    color: #000000;
+  }
+
+  .dark .sidebar {
+    background-color: #000000;
+  }
+
+  /* When the sidebar is visible */
+  .show {
+    transform: translateX(0); /* Sidebar is in view */
+  }
+
+  /* When the sidebar is hidden */
+  .hide {
+    transform: translateX(-100%); /* Sidebar is hidden off-screen */
+  }
+
+  /* Profile image container styling */
+  .profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 30px;
+    width: 100px;
+  }
+
+  .profile img {
+    width: 100px;
+    height: 30px;
+    /* border-radius: 50%; */
+  }
+
+  /* Sidebar navigation links styling */
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .sidebar ul li {
+    padding: 15px;
+  }
+
+  .sidebar ul li a {
+    color: #6e6e6e;
+
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+  }
+
+  .light .sidebar ul li a {
+    color: #6e6e6e;
+  }
+
+  .sidebar ul li a:hover {
+    background-color: #34495e;
+    border-radius: 4px;
+  }
+
+  /* Sidebar icons styling */
+  .icon {
+    margin-right: 10px;
+  }
+
+  .active {
+    background: linear-gradient(
+      90deg,
+      rgba(172, 169, 255, 0.91) 0%,
+      rgba(172, 169, 255, 0) 91.25%
+    );
+
+    border-radius: 4px;
+    color: purple;
+  }
+
+  .themebtn {
+    height: 50px;
+    width: 74px;
+    display: flex;
+    position: relative;
+    /* border: 1px solid blueviolet; */
+    bottom: -50px;
+    left: 30px;
+  }
+}
